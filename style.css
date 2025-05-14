@@ -1,17 +1,16 @@
-[data-bs-theme=light] {
-    --bs-primary: #7749f8;
+.haut{
+    margin: 0px;
 }
 
-.btn-bd-primary {
-    --bs-btn-font-weight: 600;
+.btn-primary {
     --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-bg: var(--bs-indigo); 
+    --bs-btn-border-radius: .5rem;
     --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
-    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
-    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+    --bs-btn-hover-bg: red;
+    --bs-btn-hover-border-color: orange;
+    --bs-btn-focus-shadow-rgb: green;
+    --bs-btn-active-color: yellow;
+    --bs-btn-active-bg: purple;
+    --bs-btn-active-border-color: red;
 }
