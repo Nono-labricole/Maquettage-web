@@ -25,10 +25,8 @@
     display: block;
 }
 
-.blogpost{
+.blogpost {
     height: 416px;
-    background: var(--colors-blue-blue-200, #9EC5FE);
-    background-image: url("/images/Blog post.png");
-    background-size: cover;
+    background: var(--colors-blue-blue-200, #9EC5FE)
+     url("/images/Blog post.png") no-repeat center center / contain;
 }
-
