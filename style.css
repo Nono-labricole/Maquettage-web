@@ -2,6 +2,10 @@
     margin: 0px;
 }
 
+:root, [data-bs-theme=light] {
+    --bs-primary: #7749F8;
+}
+
 .btn-primary {
     --bs-btn-color: var(--bs-white);
     --bs-btn-bg: var(--bs-indigo); 
@@ -28,5 +32,6 @@
 
 .toast:not(.show){
     display: block;
+    --text-bg-primary : var(--Primary-Color, #7749F8);
 }
 
