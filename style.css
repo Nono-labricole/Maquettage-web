@@ -28,5 +28,6 @@
 .blogpost {
     height: 416px;
     background: var(--colors-blue-blue-200, #9EC5FE)
-     url("/images/Blog post.png") no-repeat center center / contain;
+     url("/images/Blog post.png") no-repeat center center / 100% auto;
 }
+
