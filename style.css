@@ -2,6 +2,11 @@
     margin: 0px;
 }
 
+:root, [data-bs-theme=light] {
+    --bs-primary: #7749F8;
+    --bs-primary-rgb: 119,73,248;
+}
+
 .btn-primary {
     --bs-btn-color: var(--bs-white);
     --bs-btn-bg: var(--bs-indigo); 
@@ -15,6 +20,13 @@
     --bs-btn-active-border-color: red;
 }
 
-#poptop{
-    background-color: var(--bs-indigo); 
+
+.toast:not(.show){
+    display: block;
+}
+
+.blogpost {
+    height: 416px;
+    background: var(--colors-blue-blue-200, #9EC5FE)
+     url("/images/Blog post.png") no-repeat center center / contain;
 }
