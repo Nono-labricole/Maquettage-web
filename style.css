@@ -108,3 +108,8 @@ h6{
     justify-content: center;
     align-items: center;
 }
+
+.acard{
+    border: 2px;
+    border: 1px solid var(--Primary-Color, #7749F8);
+}
