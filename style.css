@@ -23,16 +23,17 @@
 .btn-primary {
     --bs-btn-color: var(--bs-white);
     --bs-btn-bg: var(--bs-indigo); 
-    --bs-btn-border-radius: .5rem;
     --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: red;
-    --bs-btn-hover-border-color: orange;
-    --bs-btn-focus-shadow-rgb: green;
-    --bs-btn-active-color: yellow;
-    --bs-btn-active-bg: purple;
-    --bs-btn-active-border-color: red;
+    --bs-btn-hover-bg: #59359a;
+    --bs-btn-hover-border-color: #EBE5FC;
+    border : 0px;
 }
 
+.btn-secondary {
+    --bs-btn-bg : #EBE5FC;
+    --bs-btn-color: var(--bs-indigo); 
+    border : 0px;
+}
 
 .toast:not(.show){
     display: block;
@@ -83,8 +84,12 @@ align-items: center;
 h1{
     color: var(--colors-purple-purple-700, #432874);
     font-family: Inter;
-    font-size: 72px;
+    font-size: 40px;
     font-weight: 700;
+}
+
+.big{
+    font-size : 72px;
 }
 
 h6{
@@ -93,4 +98,13 @@ h6{
     font-size: 21px;
     font-weight: 400;
     line-height: 36px;
+}
+
+.logo2{
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
