@@ -2,6 +2,11 @@
     margin: 0px;
 }
 
+.body{
+    font-family: Inter;
+    
+}
+
 :root, [data-bs-theme=light] {
     --bs-primary: #7749F8;
     --bs-primary-rgb: 119,73,248;
