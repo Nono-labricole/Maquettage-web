@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandiose</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #343a40; /* Darker gray for general text */
+        }
+        :root {
+            --grandiose-purple: #7127E9; /* Main vibrant purple from logo */
+            --grandiose-deep-purple: #531CB3; /* Darker shade for hovers, footer */
+            --grandiose-light-purple: #F3EFFF; /* Light background shade */
+            --grandiose-text-dark: #212529;
+            --grandiose-text-medium: #495057;
+            --grandiose-text-light: #6c757d;
+        }
+
+        .btn-primary-grandiose {
+            background-color: var(--grandiose-purple);
+            border-color: var(--grandiose-purple);
+            color: white;
+            font-weight: 500;
+            padding: 0.6rem 1.5rem;
+        }
+        .btn-primary-grandiose:hover {
+            background-color: var(--grandiose-deep-purple);
+            border-color: var(--grandiose-deep-purple);
+            color: white;
+        }
+        .btn-secondary-grandiose {
+            background-color: var(--grandiose-light-purple);
+            border-color: var(--grandiose-light-purple);
+            color: var(--grandiose-purple);
+            font-weight: 500;
+            padding: 0.6rem 1.5rem;
+        }
+        .btn-secondary-grandiose:hover {
+            background-color: #E9D8FF; /* Slightly darker light purple */
+            border-color: #E9D8FF;
+            color: var(--grandiose-deep-purple);
+        }
+        .text-grandiose-purple {
+            color: var(--grandiose-purple) !important;
+        }
+        .navbar-brand-grandiose {
+            font-weight: 900;
+            font-size: 1.7rem;
+            color: var(--grandiose-purple) !important;
+        }
+        .nav-link {
+            color: var(--grandiose-text-medium);
+            font-weight: 500;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: var(--grandiose-purple);
+        }
+        .alert-grandiose {
+            background-color: var(--grandiose-purple);
+            color: white;
+            border-radius: 0.25rem; /* Matches image more closely */
+            font-size: 0.9rem;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 0; /* Remove default margin */
+        }
+        .alert-grandiose .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+
+        .hero-section {
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+        }
+        .hero-logo {
+            background-color: var(--grandiose-purple);
+            color: white;
+            width: 100px; /* Adjusted size */
+            height: 100px;
+            border-radius: 25px; /* Rounded square */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.5rem; /* Adjusted size */
+            font-weight: 700; /* Looks less bold than 900 */
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(113, 39, 233, 0.2);
+        }
+        .hero-headline {
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: var(--grandiose-text-dark);
+        }
+        .hero-headline .highlight {
+            color: var(--grandiose-purple);
+        }
+        .hero-subheadline {
+            font-size: 1.1rem;
+            color: var(--grandiose-text-medium);
+            line-height: 1.6;
+        }
+        .hero-subheadline strong {
+            color: var(--grandiose-purple);
+            background-color: var(--grandiose-light-purple);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .section-identifier { /* The small 'g' logo before section titles */
+            background-color: var(--grandiose-purple);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700; /* Matched image's weight */
+            color: var(--grandiose-text-dark);
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-icon-img { /* Using img for icons from screenshot */
+            width: 32px; /* Adjust size as needed */
+            height: 32px;
+            margin-bottom: 1rem;
+        }
+        .feature-card {
+            padding: 1.5rem 1rem;
+        }
+        .feature-card h5 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--grandiose-text-dark);
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p {
+            font-size: 0.875rem;
+            color: var(--grandiose-text-light);
+            line-height: 1.6;
+            min-height: 100px; /* To align buttons if text length varies */
+        }
+        .btn-feature {
+            border: 1px solid #ced4da;
+            color: var(--grandiose-text-medium);
+            font-size: 0.8rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.25rem;
+            background-color: white;
+        }
+        .btn-feature:hover {
+            background-color: var(--grandiose-light-purple);
+            color: var(--grandiose-purple);
+            border-color: var(--grandiose-purple);
+        }
+        
+        .stats-and-testimonials-section { /* Combined section */
+            padding: 3rem 0;
+            border-top: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
+            background-color: #f8f9fa; /* Light grey bg */
+        }
+        .stat-item {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700; /* Bold but not 900 */
+            color: var(--grandiose-purple);
+        }
+        .stat-text {
+            font-size: 0.9rem;
+            color: var(--grandiose-text-medium);
+        }
+        .stat-text .star {
+            color: var(--grandiose-purple); /* Purple star */
+            font-size: 0.8em;
+            position: relative;
+            top: -2px;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex; /* Use flex for avatar and content alignment */
+            align-items: flex-start;
+        }
+        .testimonial-avatar {
+            width: 40px; /* Smaller avatar */
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .testimonial-content {
+            flex-grow: 1;
+        }
+        .testimonial-tag {
+            background-color: var(--grandiose-purple);
+            color: white;
+            font-size: 0.65rem; /* Smaller tag */
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px; /* Pill shape */
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .testimonial-text {
+            font-size: 0.85rem; /* Slightly smaller */
+            color: var(--grandiose-text-medium);
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+        .testimonial-rating {
+            font-size: 0.8rem;
+            color: var(--grandiose-text-light);
+        }
+        .testimonial-rating .star-filled {
+            color: var(--grandiose-purple);
+        }
+        .testimonial-rating .star-empty {
+            color: #ced4da;
+        }
+
+        .questions-section {
+            padding: 3.5rem 0;
+            background-color: #fff; /* White background for this section */
+        }
+        .accordion-button {
+            font-weight: 600;
+            color: var(--grandiose-text-dark);
+        }
+        .accordion-button:not(.collapsed) {
+            color: var(--grandiose-purple);
+            background-color: var(--grandiose-light-purple);
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.05);
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(113, 39, 233, 0.2);
+        }
+        .accordion-body {
+            font-size: 0.9rem;
+            color: var(--grandiose-text-medium);
+        }
+
+        .collaborators-section {
+            padding: 3.5rem 0;
+            background-color: #f8f9fa; /* Light grey bg */
+        }
+        .collaborator-filter-btn {
+            background-color: var(--grandiose-purple);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            margin: 0 0.3rem;
+            border-radius: 20px; /* Pill shape */
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+        .collaborator-filter-btn:hover, .collaborator-filter-btn.active {
+            background-color: var(--grandiose-deep-purple);
+        }
+        .collaborator-card {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding: 1rem;
+        }
+        .collaborator-image-wrapper {
+            margin-bottom: 1rem;
+            display: inline-block;
+            width: 150px; /* Control size here */
+            height: 150px;
+        }
+        .collaborator-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Approximating blob shapes - these are very specific and hard to replicate perfectly with CSS alone */
+        #collab1 img { border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; }
+        #collab2 img { border-radius: 40% 60% 50% 50% / 50% 40% 60% 50%; } /* different shape for Natiah */
+        #collab3 img { border-radius: 30% 70% 40% 60% / 60% 30% 70% 40%; } /* different shape for Nathalia */
+        #collab4 img { border-radius: 70% 30% 60% 40% / 40% 70% 30% 60%; } /* different shape for Albaneta */
+
+        .collaborator-tag {
+            background-color: var(--grandiose-light-purple);
+            color: var(--grandiose-purple);
+            font-size: 0.7rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px; /* Pill shape */
+            display: inline-block;
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+        .collaborator-name {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--grandiose-text-dark);
+            margin-bottom: 0.3rem;
+        }
+        .collaborator-bio {
+            font-size: 0.8rem;
+            color: var(--grandiose-text-light);
+            line-height: 1.5;
+            max-width: 220px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-grandiose {
+            background-color: var(--grandiose-deep-purple);
+            color: white;
+            padding: 4rem 0 3rem;
+        }
+        .footer-grandiose .section-identifier {
+             background-color: white;
+             color: var(--grandiose-deep-purple);
+             margin-left: auto;
+             margin-right: auto;
+        }
+        .footer-grandiose .btn-primary-grandiose { /* Special styling for footer button */
+            background-color: white;
+            color: var(--grandiose-deep-purple);
+            border: none;
+            font-weight: 600;
+        }
+        .footer-grandiose .btn-primary-grandiose:hover {
+            background-color: #f0f0f0;
+             color: var(--grandiose-deep-purple);
+        }
+        .footer-grandiose h5 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .footer-grandiose p {
+            font-size: 0.9rem;
+            color: #e0e0e0;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 991px) { /* Medium devices (tablets, less than 992px) */
+            .feature-card p {
+                min-height: auto; /* Remove min-height for stacked cards */
+            }
+             .collaborator-card {
+                 margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 767px) { /* Small devices (landscape phones, less than 768px) */
+            .hero-headline {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .stat-item {
+                margin-bottom: 1.5rem;
+                 flex-basis: 50%; /* 2 stats per row */
+            }
+            .stats-row {
+                justify-content: space-around !important;
+            }
+            .footer-grandiose .text-md-start {
+                text-align: center !important;
+            }
+            .footer-grandiose h5 {
+                margin-top: 1.5rem;
+            }
+             .hero-logo {
+                width: 80px;
+                height: 80px;
+                font-size: 3.5rem;
+            }
+        }
+         @media (max-width: 575px) { /* Extra small devices (portrait phones, less than 576px) */
+            .hero-headline {
+                font-size: 2.1rem;
+            }
+             .hero-subheadline {
+                font-size: 1rem;
+            }
+             .btn-primary-grandiose, .btn-secondary-grandiose {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+             .btn-primary-grandiose + .btn-secondary-grandiose {
+                margin-left: 0 !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Alert -->
+    <div class="alert alert-grandiose alert-dismissible fade show text-center sticky-top" role="alert">
+        Hey, welcome back to Grandiose !
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-grandiose" href="#">GRANDIOSE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hire us !</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="hero-logo">g</div>
+            </div>
+            <h1 class="hero-headline mb-3">Grandiose, <span class="highlight">they are dedicated</span></h1>
+            <p class="hero-subheadline mb-4 col-lg-7 col-md-9 mx-auto">
+                Hire a Grandiose team and <strong>fire them when you're done</strong>, don't be afraid, they have work to accomplish !
+            </p>
+            <button class="btn btn-primary-grandiose btn-lg px-4 me-sm-2">Hire us !</button>
+            <button class="btn btn-secondary-grandiose btn-lg px-4 mt-2 mt-sm-0">Discover Grandiose</button>
+        </div>
+    </section>
+
+    <!-- Designed to help Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="section-identifier">g</div>
+            </div>
+            <h2 class="section-title text-center">Designed to help</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card text-center">
+                         <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iNCIgeT0iMTgiIHdpZHRoPSIxNiIgaGVpZ2h0PSIyMCIgcng9IjMiIHN0cm9rZT0iIzcxMjdlOSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHJlY3QgeD0iMjgiIHk9IjE4IiB3aWR0aD0iMTYiIGhlaWdodD0iMjAiIHJ4PSIzIiBzdHJva2U9IiM3MTI3ZTkiIHN0cm9rZS13aWR0aD0iMi41Ii8+CjxwYXRoIGQ9Ik0yMCAyOEMyMS4xMDQ2IDI4IDIyIDI3LjEwNDYgMjIgMjZDMjIgMjQuODk1NCAyMS4xMDQ2IDI0IDIwIDI0SDI4QzI2Ljg5NTQgMjQgMjYgMjQuODk1NCAyNiAyNkMyNiAyNy4xMDQ2IDI2Ljg5NTQgMjggMjggMjgiIHN0cm9rZT0iIzcxMjdlOSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" alt="Brand Design Icon" class="feature-icon-img">
+                        <h5>Brand design</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.</p>
+                        <button class="btn btn-feature">I need an identity !</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card text-center">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0IDVDMTQuMDU4OSA1IDYgMTIuMDk2NCA2IDIyLjQ5OEM2IDMwLjE1MSA5LjUxNDg2IDM4LjA4IDE3LjMzNyA0Mi4yMDZDMTcuNjQzNiA0Mi4zNzc0IDE4LjAwODYgNDIuMTk2MiAxOC4wMjg3IDQxLjg1MTRMMTguNTQ4MSAyMy43OTM5QzE4LjU2MzkgMjMuNDg3NSAxOC4yNjU0IDIzLjIyODkgMTcuOTU5MSAyMy4yNDQ4QzEzLjM2NTcgMjMuNjIyOSA5LjgwNDM1IDIzLjAwNzQgOS40MDM2NiAxOC4yMjQxQzkuMDAyOTggMTMuNDQxIDEyLjQzNDcgMTAuMDIxOSAxNy40NjcxIDkuNTE3MDNDMjIuNTA5NSA5LjAxMjI4IDI2Ljk3ODEgMTIuNTE2MSAyNy40ODMgMTcuNTQ5MkMyNy45ODc4IDIyLjU4MjMgMjQuNDg0IDIzLjA5NDIgMTkuNjAwOSAyMy4yNDQ4QzE5LjQ4MzEgMjMuMjQ4NCAxOS4zNzUgMjMuMzU2NyAxOS4zNzUgMjMuNDc0NVY0MS44NTE0QzE5LjM3NSA0Mi4xOTYyIDE5Ljc0IDQyLjM3NzQgMjAuMDQ2NiA0Mi4yMDZDMTkuNzM0OSA0Mi4zNzU3IDIwLjA0MTUgNDIuMTk1MSAyMC4wNDE2IDQxLjg1MTRMMjAuNTYxIDIyLjc5MzlDMjAuNTc2OCAyMS40ODc1IDIwLjI3ODMgMjAuMjI4OSAxOS45NzIgMjAuMjQ0OEMxNS4zNzg2IDIwLjYyMjkgMTEuODA3MyAyMS4wMDc0IDExLjQwNjYgMTYuMjI0MUMxMS4wMDU5IDExLjQ0MSAxNC40MzQ3IDguMDIxOTEgMTkuNDY3MSA3LjUxNzA0QzI0LjUwOTUgNy4wMTIyOCAyOC45NzggMTAuNTE2MSAyOS40ODMgMTUuNTQ5MkMzMC4wMTIxIDIwLjI3MDYgMjUuOTkyNCAyMy4xNTI4IDI0IDI0LjI5MjdDMjIuMDA3NiAyMy4xNTI4IDE3Ljk4NzkgMjAuMjcwNiAxNy40ODMgMTUuNTQ5MkMxNi45NzgyIDEwLjUxNjEgMjAuNTExNiA3LjAxMjI4IDIyLjQ1NTQgNy40ODQ3MkMyNC42NDk2IDguMDAxNDIgMjUuODE4IDkuOTY3MzcgMjUuMDYzNCAxMS44Nzg4IiBmaWxsPSIjNzEyN2U5Ii8+CjxwYXRoIGQ9Ik0yNCA1QzE0LjA1ODkgNSA2IDEyLjA5NjQgNiAyMi40OTJDNiAzMi44ODc2IDE0LjA1ODkgNDMgMjQgNDNDMzMuOTQwOCA0MyA0MiAzMi44ODc2IDQyIDIyLjQ5MkM0MiAxMi4wOTY0IDMzLjk0MDggNSAyNCA1Wk0zMi40MTQxIDIwLjU4NTlMMjEuNDE0MSAzMS41ODU5QzIwLjgyODYgMzIuMzczNCAyMC4wMjA5IDMyLjM3MzQgMTkuNDE0MSAzMS41ODU5TDE1LjU4NTkgMjcuNzU3OEMxNC43OTg0IDI2Ljk3MDMgMTQuNzk4NCAyNS42ODEgMTUuNTg1OSAyNC44OTM2QzE2LjM3MzQgMjQuMTA2MSAxNy42ODEgMjQuMTA2MSAxOC40NzM2IDI0Ljg5MzZMMjAuNDE0MSAyNi44MzU5TDMwLjQxNDEgMTYuNDE0MUMzMS4yMDE2IDE1LjYyNjYgMzIuMzkzOSA deftlyMTUuNjI2NiAzMy4yNjM0IDE2LjQxNDFDNDQuMjEwOSAxNy4yMDE2IDM0LjIxMDkgMTkuNzk4NCAzMi40MTQxIDIwLjU4NTlaIiBmaWxsPSIjNzEyN2U5IiBzdHJva2U9IiM3MTI3ZTkiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=" alt="SEO & Marketing Icon" class="feature-icon-img">
+                        <h5>SEO & marketing</h5>
+                        <p>Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh</p>
+                        <button class="btn btn-feature">Make me the first !</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card text-center">
+                         <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0IDVMMTMgMjNIMjBMMTggMzRMMzAgMjRIMjVMMjQgNVoiIGZpbGw9IiM3MTI3ZTkiIHN0cm9rZT0iIzcxMjdlOSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" alt="Creative Design Icon" class="feature-icon-img">
+                        <h5>Creative Design</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.</p>
+                        <button class="btn btn-feature">I need innovation !</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card text-center">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0IDRMMjcuNzI3OSA5LjQ1NDU1TDM0IDEwLjkxTDI5LjQ1NDUgMTUuMDlMMzAuOTEgMjEuMjcyN0wyNCAxOC4wOTE4TDE3LjA5IDIxLjI3MjdMMTguNTQ1NSAxNS4wOUwxNCAxMC45MUwyMC4yNzIzIDkuNDU0NTVMMjQgNFoiIGZpbGw9IiM3MTI3ZTkiIHN0cm9rZT0iIzcxMjdlOSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTIgMTJMMTMuODU3MSAxMy44NTcxTDEyIDE1LjcxNDNMMTAuMTQyOSAxMy44NTcxTDEyIDEyWiIgZmlsbD0iIzcxMjdlOSIgc3Ryb2tlPSIjNzEyN2U5IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0zNiAxMkwzNy44NTcxIDEzLjg1NzFMMzYgMTUuNzE0M0wzNC4xNDI5IDEzLjg1NzFMMzYgMTJaIiBmaWxsPSIjNzEyN2U5IiBzdHJva2U9IiM3MTI3ZTkiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTM2IDM2TDM3Ljg1NzEgMzQuMTQyOUwzNiAzMi4yODU3TDM0LjE0MjkgMzQuMTQyOUwzNiAzNloiIGZpbGw9IiM3MTI3ZTkiIHN0cm9rZT0iIzcxMjdlOSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" alt="AI Consultant Icon" class="feature-icon-img">
+                        <h5>AI consultant</h5>
+                        <p>Mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh</p>
+                        <button class="btn btn-feature">Let's prompt !</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats & Testimonials Section -->
+    <section class="stats-and-testimonials-section">
+        <div class="container">
+            <div class="row mb-5 justify-content-center stats-row">
+                <div class="col-auto stat-item">
+                    <div class="stat-number">1 290</div>
+                    <div class="stat-text">collaborators across the world</div>
+                </div>
+                <div class="col-auto stat-item">
+                    <div class="stat-number">4,48</div>
+                    <div class="stat-text"><span class="star">★</span> Trust Pilot evaluation</div>
+                </div>
+                <div class="col-auto stat-item">
+                    <div class="stat-number">9 178</div>
+                    <div class="stat-text">hours of dedication everyday</div>
+                </div>
+                <div class="col-auto stat-item">
+                    <div class="stat-number">890</div>
+                    <div class="stat-text">pizzas eaten since 10:00 PM</div>
+                </div>
+                 <div class="col-auto stat-item">
+                    <div class="stat-number">1</div>
+                    <div class="stat-text">purpose, your project</div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/80?img=1" alt="User 1" class="testimonial-avatar">
+                        <div class="testimonial-content">
+                            <span class="testimonial-tag">Happy customer</span>
+                            <p class="testimonial-text">Donec at cras nisl non aenean eget eu nisl nec. Tempor diam malesuada dictum ornare sagittis sit tempus est. Egestas nulla facilisis turpis ornare nisi tortor eget. Ac purus massa nisi blandit ullamcorper sagittis. Penatibus.</p>
+                            <div class="testimonial-rating">
+                                <span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span> 5 / 5 stars
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/80?img=2" alt="User 2" class="testimonial-avatar">
+                        <div class="testimonial-content">
+                            <span class="testimonial-tag">So Grandiose !</span>
+                             <p class="testimonial-text">Faucibus cras felis porta consectetur dui quis. Bibendum orci lorem elementum euismod aliquet turpis tellus. Diam cras enim vitae pellentesque viverra sem. Augue consectetur arcu diam odio ornare sed eu.</p>
+                            <div class="testimonial-rating">
+                                <span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span> 4 / 5 stars
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <img src="https://i.pravatar.cc/80?img=3" alt="User 3" class="testimonial-avatar">
+                        <div class="testimonial-content">
+                             <span class="testimonial-tag">So gooood !</span>
+                             <p class="testimonial-text">A morbi volutpat in leo purus. Ac aliquam tristique laoreet nec turpis id tempus id tincidunt. Purus sit non mollis elementum ac nibh faucibus ut enim. Adipiscing eu tortor viverra vivamus commodo tellus. In sit facilisi aliquam.</p>
+                            <div class="testimonial-rating">
+                                <span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-empty">★</span><span class="star-empty">★</span> 3 / 5 stars
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your questions Section -->
+    <section class="questions-section">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                 <div class="section-identifier">g</div>
+            </div>
+            <h2 class="section-title text-center">Your questions</h2>
+            <div class="accordion col-lg-8 col-md-10 mx-auto" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What are these Grandiose people ?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            You tell me I can hire as many people as I need ?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How much does this costs ?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                           This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborators Section -->
+    <section class="collaborators-section">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                 <div class="section-identifier">g</div>
+            </div>
+            <h2 class="section-title text-center">Discover our latest Grandiose collaborators</h2>
+            <div class="text-center mb-4">
+                <button class="btn collaborator-filter-btn active">Grandiose creatives</button>
+                <button class="btn collaborator-filter-btn">Grandiose writers</button>
+                <button class="btn collaborator-filter-btn">Grandiose SEO</button>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="collaborator-card">
+                        <div class="collaborator-image-wrapper" id="collab1">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=150&h=150&q=80" alt="Nathaniel Faraday">
+                        </div>
+                        <span class="collaborator-tag">He'll break you mind</span>
+                        <h5 class="collaborator-name">Nathaniel Faraday</h5>
+                        <p class="collaborator-bio">Condimentum ultrices vel nulla gravida lorem. Suspendisse sapien tristique at a leo turpis. Amet eu accumsan porttitor.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="collaborator-card">
+                        <div class="collaborator-image-wrapper" id="collab2">
+                             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=150&h=150&q=80" alt="Natiah Delonghi">
+                        </div>
+                        <span class="collaborator-tag">The Force</span>
+                        <h5 class="collaborator-name">Natiah Delonghi</h5>
+                        <p class="collaborator-bio">Sit donec rutrum dui sed mi. Mus donec in massa integer velit mattis non ipsum leo. Sapien est nunc erat sed arcu.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="collaborator-card">
+                        <div class="collaborator-image-wrapper" id="collab3">
+                            <img src="https://images.unsplash.com/photo-1595757811204-c01836507834?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBvcnRyYWl0JTIwc2hvcnQlMjBoYWlyfGVufDB8fDB8fHww&auto=format&fit=crop&w=150&h=150&q=80" alt="Nathalia Erzigova">
+                        </div>
+                        <span class="collaborator-tag">Blond stamina</span>
+                        <h5 class="collaborator-name">Nathalia Erzigova</h5>
+                        <p class="collaborator-bio">Id et justo dolor in aliquam aliquet quam. Mus euismod amet sagittis suspendisse sit volutpat amet sit massa. Tempus.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="collaborator-card">
+                        <div class="collaborator-image-wrapper" id="collab4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=150&h=150&q=80" alt="Albaneta Duchamp">
+                        </div>
+                        <span class="collaborator-tag">Gen'z, they know something</span>
+                        <h5 class="collaborator-name">Albaneta Duchamp</h5>
+                        <p class="collaborator-bio">At molestie amet at montes elit nec purus ornare diam. Magna adipiscing viverra arcu feugiat commodo vel vestibulum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-grandiose text-center">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                 <div class="section-identifier mb-4">g</div>
+            </div>
+            <button class="btn btn-primary-grandiose btn-lg px-5 mb-5">Be Grandiose</button>
+            <div class="row">
+                <div class="col-md-6 text-md-start mb-4 mb-md-0">
+                    <h5>New York Office</h5>
+                    <p>1065 Avenue of the Americas, New York, NY 10018-1878</p>
+                </div>
+                <div class="col-md-6 text-md-start">
+                    <h5>London Office</h5>
+                    <p>Swains Lane Highgate, London N6 6PJ England</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script>
+        // Optional: Small script to make filter buttons act like tabs (visual only)
+        const filterButtons = document.querySelectorAll('.collaborator-filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                // Add filtering logic here if this were a dynamic application
+            });
+        });
+
+        // Used simple SVG icons inline for feature section.
+        // If you had many icons, an icon font or SVG sprite sheet would be better.
+    </script>
+</body>
+</html>

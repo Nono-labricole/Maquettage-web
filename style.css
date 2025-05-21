@@ -2,6 +2,21 @@
     margin: 0px;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+.body{
+    font-family: Inter;
+    color:#432874;
+
+    
+}
+
 :root, [data-bs-theme=light] {
     --bs-primary: #7749F8;
     --bs-primary-rgb: 119,73,248;
@@ -10,16 +25,18 @@
 .btn-primary {
     --bs-btn-color: var(--bs-white);
     --bs-btn-bg: var(--bs-indigo); 
-    --bs-btn-border-radius: .5rem;
     --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: red;
-    --bs-btn-hover-border-color: orange;
-    --bs-btn-focus-shadow-rgb: green;
-    --bs-btn-active-color: yellow;
-    --bs-btn-active-bg: purple;
-    --bs-btn-active-border-color: red;
+    --bs-btn-hover-bg: #59359a;
+    --bs-btn-hover-border-color: #EBE5FC;
+    border : 0px;
 }
 
+.btn-secondary {
+    --bs-btn-bg : #EBE5FC;
+    --bs-btn-color: var(--bs-indigo); 
+    --bs-btn-hover-bg: var(--bs-indigo);
+    border : 0px;
+}
 
 .toast:not(.show){
     display: block;
@@ -31,3 +48,85 @@
      url("/images/Blog post.png") no-repeat center center / 100% auto;
 }
 
+.container-fluid{
+    width: 75%;
+}
+
+.navbar-brand {
+    color: var(--colors-indigo-indigo-400, #8540F5);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.navbar{
+    --bs-navbar-hover-color : var(--colors-indigo-indigo-200, #8540F5);
+}
+
+.nav-link.active {
+    --bs-navbar-active-color : #5227CC;
+    font-size: 16px;
+}
+
+.logo{
+    display: flex;
+width: 192px;
+height: 192px;
+transform: rotate(-5deg);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.top-p1{
+    width: 75%;
+    margin-right :auto;
+
+    margin-left: auto;
+}
+
+h1{
+    color: var(--colors-purple-purple-700, #432874);
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.big{
+    font-size : 72px;
+}
+
+h6{
+    color: var(--colors-purple-purple-700, #432874);
+    font-family: Inter;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.logo2{
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.acard{
+    border: 1px solid var(--Primary-Color, #7749F8);
+    background-color: white;
+}
+
+h4{
+    color: var(--colors-indigo-indigo-700, #3D0A91);
+    font-weight: 600;
+}
+
+.indics{
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.text-start{
+    color: var(--colors-indigo-indigo-700, #3D0A91);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--début de la modal----->
+  <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+      
+      </div>
+    </div>
+  </div>
+ 
+    <!--entête -->
+    <div class="entête form">
+    <p> Hire us! </p>
+    <button type="button" class="btn-close" disabled aria-label="Close"></button>
+    </div>
+
+<!--form -->
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Your full name</label>
+        <input type="Your full name" class="form-control" id="exampleFormControlInput1" placeholder="Eg.John Grandiose">
+      </div>
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Eg.john@grandiose.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Describe your project in a few lines</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Write a message</textarea>
+      </div>
+     
+      <!--form select-->
+      <label for="exampleFormControlInput1" class="form-label">Your budget</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>No scale selected</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <!--Checks form section créative-->
+      <label for="exampleFormControlInput1" class="form-label">What are the profile you'll need ?</label>
+      <p>The number in the badge indicates how much people are availaible to hire</p>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+        <label class="form-check-label" for="checkDefault">
+            <div><h6>Creatives</h6>
+                <p2>You want a team of designers</p2></div> 
+                <div><h6><span class="badge text-bg-secondary">340</span></h6></div>        
+        </label>
+      </div>
+    
+    
+      
+      <!--Checks form section SEO-->
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+        <label class="form-check-label" for="checkDefault">
+         <div><h6>SEO and search engines geeks </h6>
+         <p2>You want them to find you</p2></div>
+         <div><h6><span class="badge text-bg-secondary">1209</span></h6></div> 
+       
+        </label>
+      </div>
+      
+      
+      <!--Checks form section tech, devs, architects-->
+     <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+            <label class="form-check-label" for="checkDefault">
+                 <div><h6>Techs,devs,architects</h6>
+                <p2>Brillant minds at your service</p2>
+                <div><h6><span class="badge text-bg-secondary">290</span></h6></div>
+    
+      </div>
+
+      <div class="d-flex flex-row hstack gap-1.5 mb-3">
+        <div class="p-2"><div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+            <label class="form-check-label" for="checkDefault"></div>
+        <div class="p-2"><div><h6>Techs,devs,architects</h6>
+            <p2>Brillant minds at your service</p2></div>
+        <div class="p-2"><h6><span class="badge text-bg-secondary">290</span></h6></div>
+      </div>
+      
+
+      <div class="d-flex align-items-center justify-content-between w-50 ">
+<div> <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+    <label class="form-check-label" for="checkDefault"></div>
+        <div><h6>Techs,devs,architects</h6>
+            <p2>Brillant minds at your service</p2></div>
+
+             <span class="badge text-bg-secondary">New</span>
+      </div>
+             <!---modal---------------->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+      </div>
+</body>
+</html>
