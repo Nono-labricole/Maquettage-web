@@ -1,0 +1,101 @@
+/* path/to/your/styles.css */
+
+/* Existing CSS for your header, main content, etc. */
+
+/* --- Footer Styles --- */
+.footer-container {
+  display: flex;
+  width: 90rem;
+  padding: 0rem 3.75rem 5rem 3.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  background-color: #4b238d; /* Dark purple background for the footer section */
+  box-sizing: border-box; /* Include padding in the width */
+  margin: 0 auto; /* To center the 90rem footer if your body is wider */
+}
+
+.footer-content-wrapper {
+  background-color: #ffffff; /* White background for the main content area */
+  border-radius: 1rem; /* Rounded corners for the white box */
+  padding: 5rem 6.25rem; /* Adjust padding to match the visual spacing */
+  width: calc(100% - (2 * 3.75rem)); /* Account for the container's horizontal padding */
+  display: flex;
+  /* Now, everything is within footer-left, so we might not need justify-content: space-between here
+     if the layout simplifies to a single column, or we can adjust it for centering if needed.
+     For this new layout, we'll align all content to the start */
+  justify-content: flex-start; /* Aligns content to the left within the white box */
+  align-items: flex-start; /* Aligns content to the top within the white box */
+  box-sizing: border-box;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column; /* Stack logo, offices, and button vertically */
+  align-items: flex-start; /* Align all items to the left */
+  gap: 2.5rem; /* Space between logo and office group, and office group and button */
+  /* Since all content is now in footer-left, it will take up 100% width of the wrapper */
+  width: 100%;
+}
+
+.g-logo {
+  width: 2.5rem; /* Adjust size as needed, based on the image */
+  height: auto;
+  /* Margin-bottom can create space below the logo, overriding gap if needed */
+  /* margin-bottom: 2.5rem; */
+}
+
+/* This new group will hold both office addresses */
+.office-contact-group {
+  display: flex; /* Arrange New York and London office info side-by-side */
+  gap: 10rem; /* Space between New York and London office info */
+  /* You might need to adjust gap here if the spacing changes with the new layout */
+  /* Since it's a group, align it to start */
+  align-items: flex-start;
+}
+
+.office-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Space between title and address */
+}
+
+.office-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #7b3dd0;
+  margin: 0;
+}
+
+.office-address {
+  font-size: 1rem;
+  color: #7b3dd0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.be-grandiose-button {
+  background-color: #8a4edb;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* margin-top can create space above the button, overriding gap if needed */
+  /* margin-top: 2.5rem; */
+}
+
+.be-grandiose-button:hover {
+  background-color: #7b3dd0;
+}
+
+/* Remove the .footer-right styles as it's no longer used */
+/* .footer-right {
+  display: flex;
+  gap: 10rem;
+} */
+
+/* --- End Footer Styles --- */
