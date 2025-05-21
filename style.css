@@ -12,6 +12,8 @@
 
 .body{
     font-family: Inter;
+    color:#432874;
+
     
 }
 
@@ -32,6 +34,7 @@
 .btn-secondary {
     --bs-btn-bg : #EBE5FC;
     --bs-btn-color: var(--bs-indigo); 
+    --bs-btn-hover-bg: var(--bs-indigo);
     border : 0px;
 }
 
@@ -112,4 +115,18 @@ h6{
 .acard{
     border: 1px solid var(--Primary-Color, #7749F8);
     background-color: white;
+}
+
+h4{
+    color: var(--colors-indigo-indigo-700, #3D0A91);
+    font-weight: 600;
+}
+
+.indics{
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.text-start{
+    color: var(--colors-indigo-indigo-700, #3D0A91);
 }
