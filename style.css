@@ -28,6 +28,8 @@
     --bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: #59359a;
     --bs-btn-hover-border-color: #EBE5FC;
+    --bs-btn-active-bg: var(--Primary-Color-Dark, #5227CC);
+
     border : 0px;
 }
 
