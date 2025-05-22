@@ -168,3 +168,8 @@ aspect-ratio: 1/1;
 .accordion-button:focus {
   --bs-accordion-btn-focus-box-shadow :  #EBE5FC ;
 }
+
+.secondary{
+    background-color: var(--Primary-Light, #EBE5FC);
+    color: var(--Primary-Color-Dark, #5227CC);
+}
