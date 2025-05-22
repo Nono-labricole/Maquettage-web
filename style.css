@@ -247,3 +247,15 @@ height: 2.8125rem;
     align-items: center;
     align-self: stretch;
 }
+
+.rectangle-violet{
+    height: 322px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background: var(--colors-indigo-indigo-700, #3D0A91);
+}
+
+.footer{
+    width: 75%;
+}
