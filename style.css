@@ -262,3 +262,39 @@ footer{
     border-radius: 1rem;
     transform: translateY(-6rem);
 }
+
+
+
+
+
+
+.pagination-container {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem;
+    align-self: stretch; 
+    border-radius: 0.5rem;
+    background: #F8F9FA; 
+    width: 75%;  
+    margin: auto;
+    height: 4.5rem;
+}
+
+.pagination .page-item .page-link {
+    color: #6c757d; 
+    border-color: #dee2e6; 
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #7749F8; 
+    border-color: #7749F8; 
+    color: #ffffff; 
+}
+
+.pagination .page-item:not(.active) .page-link:hover {
+    color: #7749F8; 
+    border-color: #7749F8; 
+}
