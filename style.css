@@ -256,6 +256,7 @@ height: 2.8125rem;
     background: var(--colors-indigo-indigo-700, #3D0A91);
 }
 
-.footer{
+footer{
     width: 75%;
+    margin: auto;
 }
