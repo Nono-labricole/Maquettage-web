@@ -122,6 +122,11 @@ h4{
     font-weight: 600;
 }
 
+.card-title{
+    color: var(--colors-indigo-indigo-700, #3D0A91);
+    font-weight: 600;
+}
+
 .indics{
     font-size: 52px;
     font-weight: 700;
