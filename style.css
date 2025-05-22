@@ -155,6 +155,7 @@ aspect-ratio: 1/1;
 .badge{
     --bs-badge-border-radius : 1rem;
     background: var(--colors-indigo-indigo-700, #3D0A91);
+    --bs-badge-font-weight : 400;
 }
 
 .accordion-button:not(.collapsed) {
