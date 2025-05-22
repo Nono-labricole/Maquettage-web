@@ -249,14 +249,16 @@ height: 2.8125rem;
 }
 
 .rectangle-violet{
-    height: 322px;
     width: 100%;
-    position: fixed;
     bottom: 0px;
     background: var(--colors-indigo-indigo-700, #3D0A91);
+    margin-top: 6rem;
 }
 
 footer{
     width: 75%;
     margin: auto;
+    background-color: white;
+    border-radius: 1rem;
+    transform: translateY(-6rem);
 }
