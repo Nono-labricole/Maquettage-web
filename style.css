@@ -317,4 +317,6 @@ footer{
 .modal{
     display: block;
     --bs-modal-width: 50vw;
+    --bs-modal-header-border-width: 0px;
+
 }
