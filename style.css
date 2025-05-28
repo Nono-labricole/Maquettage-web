@@ -299,3 +299,7 @@ footer{
     color: #7749F8; 
     border-color: #7749F8; 
 }
+
+.clairblochaut{
+    background: var(--colors-indigo-indigo-500, #6610F2);
+}
