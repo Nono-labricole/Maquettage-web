@@ -378,3 +378,13 @@ footer{
 .display-yes{
     display: block;
 }
+
+.left{
+    text-align: left;
+}
+
+.linkcard{
+    color: #000;
+    text-decoration-line: underline;
+    align-self: flex-end;
+}
