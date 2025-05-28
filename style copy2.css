@@ -239,13 +239,13 @@ aspect-ratio: 1/1;
    width: 6.25rem;
 height: 2.8125rem;
 }
-/*
+
 .custom-badge {
     padding: 0.25rem 0.5rem;
     border-radius: 5px;
     font-size: 0.8em;
     gap:0.5rem ;
-}*/
+}
 
 /* Specific badge colors to match the image */
 .badge.bg-secondary {
@@ -345,32 +345,6 @@ footer{
 }
 
 .modal{
-    display: none;
+    display: block;
     --bs-modal-width: 50vw;
-    --bs-modal-header-border-width: 0px;
-}
-
-.profile{
-    color: var(--Gray-800, #343A40);
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0%;
-}
-
-.profiledesc{
-    color: var(--Gray-600, #6C757D);
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.form-label{
-    color: #000;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.descform{
-    color: #000;
-    font-size: 12px;
-    font-weight: 400;
 }
