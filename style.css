@@ -303,3 +303,13 @@ footer{
 .clairblochaut{
     background: var(--colors-indigo-indigo-500, #6610F2);
 }
+
+.blochaut{
+    background: var(--colors-indigo-indigo-600, #520DC2);
+}
+
+.bloctxt{
+    color: #FFF;
+    font-size: 52px;
+    font-weight: 700;
+}
