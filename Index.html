@@ -469,7 +469,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Hire Us</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" id="closetop" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class=" d-flex flex-column gap-3"> 
@@ -550,6 +550,8 @@
 
   var closeb = document.getElementById("closebottom");
 
+  var closet = document.getElementById("closetop");
+
   openform.addEventListener("click", function(){
     form.classList.add("display-yes");
   });
@@ -558,7 +560,7 @@
     form.classList.remove("display-yes");
   });
 
-  closeb.addEventListener("click", function(){
+  closet.addEventListener("click", function(){
     form.classList.remove("display-yes");
   });
 
