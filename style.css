@@ -42,6 +42,9 @@
 
 .toast:not(.show){
     display: block;
+    @media(max-width: 800px) {
+        display: none;
+    }
 }
 
 .blogpost {
@@ -101,12 +104,17 @@
 
 .logo{
     display: flex;
-width: 192px;
-height: 192px;
-transform: rotate(-5deg);
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    width: 192px;
+    height: 192px;
+    transform: rotate(-5deg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media(max-width: 800px) {
+        width: 120px;
+        height: 120px;
+    }
+    
 }
 
 .top-p1{
@@ -121,10 +129,16 @@ h1{
     font-family: Inter;
     font-size: 40px;
     font-weight: 700;
+    @media(max-width: 800px) {
+        font-size: 32px;
+    }
 }
 
 .big{
     font-size : 72px;
+    @media(max-width: 800px) {
+        font-size: 56px;
+    }
 }
 
 h6{
@@ -133,6 +147,10 @@ h6{
     font-size: 21px;
     font-weight: 400;
     line-height: 36px;
+    @media(max-width: 800px) {
+        font-size: 16px;
+        line-height: 18px;
+    }
 }
 
 .logo2{
@@ -142,6 +160,10 @@ h6{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media(max-width: 800px) {
+        width: 36px;
+        height: 36px;
+    }
 }
 
 .acard{
@@ -152,6 +174,7 @@ h6{
 h4{
     color: var(--colors-indigo-indigo-700, #3D0A91);
     font-weight: 600;
+    
 }
 
 .card-title{
@@ -175,11 +198,11 @@ h4{
 
 .testimonies{
     display: flex;
-width: 64px;
-height: 64px;
-justify-content: center;
-align-items: center;
-aspect-ratio: 1/1;
+    width: 64px;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
 }
 
 .badge{
@@ -237,7 +260,7 @@ aspect-ratio: 1/1;
 
 .card-logo {
    width: 6.25rem;
-height: 2.8125rem;
+    height: 2.8125rem;
 }
 /*
 .custom-badge {
@@ -342,6 +365,9 @@ footer{
     color: #FFF;
     font-size: 52px;
     font-weight: 700;
+    @media(max-width: 800px) {
+        font-size: 40px;
+    }
 }
 
 .modal{
@@ -387,4 +413,15 @@ footer{
     color: #000;
     text-decoration-line: underline;
     align-self: flex-end;
+}
+
+.Blogtxt{
+    color: #000;
+    align-self: stretch;
+    text-align: left;
+}
+
+hr{
+    color: #E0CFFC;
+    border-width: 3px;
 }

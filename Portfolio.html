@@ -30,16 +30,16 @@
     -->
     <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">GRANDIOSE</a>
+    <a class="navbar-brand" href="Index.html">GRANDIOSE</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" aria-current="page" href="#">Welcome</a>
-        <a class="nav-link" href="#">Hire us !</a>
-        <a class="nav-link active" href="#">Work</a>
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" aria-current="page" href="Index.html">Welcome</a>
+        <a class="nav-link" id="Jean-didier"href="#">Hire us !</a>
+        <a class="nav-link active" href="Portfolio.html">Work</a>
+        <a class="nav-link" href="Blog.html">Blog</a>
       </div>
     </div>
   </div>
@@ -191,7 +191,113 @@
         </div>
     </footer>
     </div>
+    <div class="modal" id="Leform" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Hire Us</h5>
+        <button type="button" class="btn-close" id="closetop" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class=" d-flex flex-column gap-3"> 
+        <div>
+        <label for="exampleFormControlInput1" class="form-label">Your full name</label>
+        <input type="Your full name" class="form-control" id="exampleFormControlInput1" placeholder="Eg.John Grandiose">
+        </div>
+        <div>
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Eg.john@grandiose.com">
+        </div>
+        <div>
+        <label for="exampleFormControlTextarea1" class="form-label">Describe your project in a few lines</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Write a message</textarea>
+        </div>
+        <div>
+        <label for="exampleFormControlInput1" class="form-label">Your budget</label>
+        <select class="form-select" aria-label="Default select example">
+        <option selected>No scale selected</option>
+        <option value="1">10€</option>
+        <option value="2">15000€</option>
+        <option value="3">168460€</option>
+        </select>
+        </div>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">What are the profile you'll need ?</label>
+            <p class="descform">The number in the badge indicates how much people are availaible to hire</p>
+        <div class="form-check d-flex align-items-center justify-content-between">
+        <div class="d-flex gap-2 align-items-center">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+        <label class="form-check-label" for="checkDefault">
+            <div><h6 class="profile">Creatives</h6>
+            <p class="profiledesc">You want a team of designers</p2></div>       
+        </label>
+        </div>
+        <div><span class="badge bg-secondary custom-badge">340</span></div>
+      </div>
+    
+    
+      
+      <div class="form-check d-flex align-items-center justify-content-between">
+        <div class="d-flex gap-2 align-items-center">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+        <label class="form-check-label" for="checkDefault">
+            <div><h6 class="profile">SEO and search engines geeks</h6>
+            <p class="profiledesc">You want them to find you</p2></div>       
+        </label>
+        </div>
+        <div><span class="badge bg-secondary custom-badge">1206</span></div>
+      </div>
+      
+      
+      <!--Checks form section tech, devs, architects-->
+     <div class="form-check d-flex align-items-center justify-content-between">
+        <div class="d-flex gap-2 align-items-center">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+        <label class="form-check-label" for="checkDefault">
+            <div><h6 class="profile">Techs, devs, architects</h6>
+            <p class="profiledesc">Brilliant minds at your service</p2></div>       
+        </label>
+        </div> 
+        <div><span class="badge bg-secondary custom-badge">290</span></div>
+      </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="closebottom" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="Grandiosissimo" class="btn btn-primary">Become Grandiose !</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+  var openform = document.getElementById("Jean-didier");
 
+  var form = document.getElementById("Leform");
+
+  var closeb = document.getElementById("closebottom");
+
+  var closet = document.getElementById("closetop");
+
+  var incredible = document.getElementById("Grandiosissimo");
+
+  openform.addEventListener("click", function(){
+    form.classList.add("display-yes");
+  });
+
+  closeb.addEventListener("click", function(){
+    form.classList.remove("display-yes");
+  });
+
+  closet.addEventListener("click", function(){
+    form.classList.remove("display-yes");
+  });
+
+ incredible.addEventListener("click", function(){
+    window.open("https://youtu.be/dQw4w9WgXcQ?si=VRmUEz7PKgkcTD_z", "_blank");
+  });
+
+</script>
         
 
 </body>

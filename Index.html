@@ -30,7 +30,7 @@
     -->
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">GRANDIOSE</a>
+      <a class="navbar-brand" href="Index.html">GRANDIOSE</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -89,6 +89,7 @@
           </div>
           </div>
         </div>
+        
         <div  class="col-lg-3 themed-grid-col ">
         <div class="d-flex flex-column p-4 justify-content-between rounded my-1.5">
         <div class="d-flex flex-column gap-4 justify-content-start">
@@ -135,6 +136,7 @@
           </div>
         </div>
     </div>
+    <hr>
     <div class="row">
     <div class="dropdown-divider"></div>
      <div  class="col themed-grid-col ">
@@ -537,7 +539,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" id="closebottom" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Become Grandiose !</button>
+        <button type="button" id="Grandiosissimo" class="btn btn-primary">Become Grandiose !</button>
       </div>
     </div>
   </div>
@@ -552,6 +554,8 @@
 
   var closet = document.getElementById("closetop");
 
+  var incredible = document.getElementById("Grandiosissimo");
+
   openform.addEventListener("click", function(){
     form.classList.add("display-yes");
   });
@@ -562,6 +566,10 @@
 
   closet.addEventListener("click", function(){
     form.classList.remove("display-yes");
+  });
+
+ incredible.addEventListener("click", function(){
+    window.open("https://youtu.be/dQw4w9WgXcQ?si=VRmUEz7PKgkcTD_z", "_blank");
   });
 
 </script>
